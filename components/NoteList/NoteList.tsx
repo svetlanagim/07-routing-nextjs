@@ -1,3 +1,4 @@
+"use client";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import type { Note } from "@/types/note";
 import { deleteNote } from "@/lib/api";
@@ -27,7 +28,9 @@ export default function NoteList({ notes }: NoteListProps) {
 
           <div className={css.footer}>
             <span className={css.tag}>{note.tag}</span>
-            <Link href={`/notes/${note.id}`}>View details</Link>
+            <Link href={`/notes/${note.id}`} className={css.link}>
+              View details
+            </Link>
             <button
               className={css.button}
               onClick={() => deleteMutation.mutate(note.id)}

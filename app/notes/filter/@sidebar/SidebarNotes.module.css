@@ -21,3 +21,8 @@
     background-color: #444;
     color: #ddd;
 }
+
+.active {
+    color: orange;
+    font-weight: 700;
+}
