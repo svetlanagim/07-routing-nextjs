@@ -32,6 +32,7 @@ export default function NotesClient({ tag }: { tag?: string }) {
 
   const handleChange = (value: string) => {
     setInputValue(value);
+    setPage(1);
     debouncedSearch(value);
   };
 
